@@ -24,7 +24,6 @@ jobs:
       - name: setup pnpm config
         run: |
           pnpm config set store-dir $PNPM_CACHE_FOLDER
-          npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
       - name: install dependencies
         run: pnpm install
       - name: create and publish versions
@@ -34,3 +33,4 @@ jobs:
           publish: pnpm ci:publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

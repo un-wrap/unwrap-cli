@@ -1,0 +1,54 @@
+{
+  "name": "unw",
+  "version": "0.1.0",
+  "description": "unwrap-cli",
+  "bin": {
+    "unw": "./bin/main.js"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "pub": "changeset",
+    "lint-staged": "lint-staged",
+    "ci:version": "changeset version",
+    "ci:publish": "pnpm run build && npm publish"
+  },
+  "files": [
+    "bin",
+    "README.md"
+  ],
+  "author": "",
+  "keywords": [],
+  "license": "mpl-2.0",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/eslint": "8.40.0",
+    "@types/node": "^20.3.3",
+    "@typescript-eslint/eslint-plugin": "5.59.7",
+    "@typescript-eslint/parser": "5.59.7",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^2.8.8",
+    "rollup": "^3.26.0",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue,astro,json,css,html}": [
+      "prettier --write"
+    ],
+    "*.{js,ts,jsx,tsx,vue,astro}": [
+      "eslint --fix"
+    ]
+  }
+}

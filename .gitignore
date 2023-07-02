@@ -1,0 +1,11 @@
+node_modules/
+
+# idea
+.idea/
+!.idea/prettier.xml
+
+# dist
+/bin/
+
+# pnpm
+.pnpm-store/

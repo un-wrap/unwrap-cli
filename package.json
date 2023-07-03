@@ -2,6 +2,7 @@
   "name": "unw",
   "version": "0.1.3",
   "description": "unwrap-cli",
+  "type": "module",
   "bin": {
     "unw": "./bin/main.js"
   },
@@ -22,20 +23,28 @@
   "license": "mpl-2.0",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
+    "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-typescript": "^11.1.2",
     "@types/eslint": "8.40.0",
+    "@types/figlet": "^1.5.6",
+    "@types/fs-extra": "^11.0.1",
     "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
     "@typescript-eslint/eslint-plugin": "5.59.7",
     "@typescript-eslint/parser": "5.59.7",
-    "eslint": "^8.44.0",
+    "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-node": "^0.3.7",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
     "rollup": "^3.26.0",
     "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   },
@@ -50,5 +59,18 @@
     "*.{js,ts,jsx,tsx,vue,astro}": [
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "@darkobits/lolcatjs": "^3.1.5",
+    "commander": "^11.0.0",
+    "figlet": "^1.6.0",
+    "fs-extra": "^11.1.1",
+    "ink": "^4.2.0",
+    "jotai": "^2.2.1",
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "commander": "^11.0.0",
+    "react": "^18.2.0"
   }
 }
